@@ -28,6 +28,8 @@ return (
       <div className='Login-form-container'>
         <form onSubmit={handleSubmit}>
           <div className='Email'>
+          <frontZise>Correo</frontZise>
+            <br></br>
             <input
               type="email"
               name="email"
@@ -37,6 +39,8 @@ return (
             />
           </div>
           <div className='Password'>
+          <frontZise>Contraseña</frontZise>
+            <br></br>
             <input
               type="password"
               name="password"
@@ -46,7 +50,7 @@ return (
             />
           </div>
           <div className='Forgot-password'>
-            <a href='#'>¿Olvidaste tu contraseña?</a>
+            <a href='VerificationCode'>¿Olvidaste tu contraseña?</a>
           </div>
           <div className='Sign-in'>
             <button type="submit">Iniciar sesión</button>

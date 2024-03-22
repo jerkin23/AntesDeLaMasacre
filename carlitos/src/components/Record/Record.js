@@ -5,6 +5,7 @@ import './Record.css';
 const Record = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleEmailChange = (e) => {
       setEmail(e.target.value);
@@ -12,6 +13,10 @@ const Record = () => {
 
   const handlePasswordChange = (e) => {
       setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -27,6 +32,8 @@ const Record = () => {
         <div className='Record -form-container'>
           <form onSubmit={handleSubmit}>
             <div className='Email'>
+            <frontZise>Correo</frontZise>
+            <br></br>
               <input
                 type="email"
                 name="email"
@@ -36,30 +43,33 @@ const Record = () => {
               />
             </div>
             <div className='Password'>
+            <frontZise>Contraseña</frontZise>
+            <br></br>
               <input
-                type="password"
-                name="password"
-                placeholder="Contraseña"
-                value={password}
-                onChange={handlePasswordChange}
-              />
-            </div>
-
-            <div className='Password'>
-              <input
-                type="password"
-                name="password"
-                placeholder="Contraseña"
-                value={password}
-                onChange={handlePasswordChange}
-              />
-            </div>
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+          <div className='Confirm-Password'>
+          <frontZise>Confirmar Contraseña</frontZise>
+          <br></br>
+            <input
+              type="text"
+              name="confirmPassword"
+              placeholder="Confirmar Contraseña"
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+            />
+          </div>
 
             <div className='Sign-in'>
               <button type="submit">Registrarse</button>
             </div>
             <div className='Sign-up'>
-              <a href='Record'>Registrarse</a>
+              <a href='Login'>Cancelar</a>
             </div>
           </form>
         </div>
