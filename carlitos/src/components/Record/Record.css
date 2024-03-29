@@ -1,1 +1,85 @@
 .Record {}
+
+.HeaderRecord h1{
+    font-family: sans-serif;
+    font-size: 59px;
+    text-align: center;
+}
+
+.EmailRecord input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 36px;
+    width: 348px;
+    margin-bottom: 10px;
+}
+
+.EmailRecord{
+    text-align: center;
+}
+
+.PasswordRecord input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 36px;
+    width: 348px;
+    margin-bottom: 10px;
+}
+
+.PasswordRecord{
+    text-align: center;
+}
+
+.Confirm-Password-Record input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 36px;
+    width: 348px;
+    margin-bottom: 25px;
+}
+
+.Confirm-Password-Record{
+    text-align: center;
+}
+
+.Registrarse button{
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-spacing: 0px;
+    border-radius: 5px;
+    text-emphasis-color: white;
+    background-color: black;
+    color: white;
+
+
+    background-color: #005DA6;
+    background-position: color(#FFFFFF);
+    height: 40px;
+    width: 184px;
+    padding: 4px 12px 4px 12px;
+
+    position: absolute;
+    top: 100;
+
+    margin-top: 5px;
+}
+
+.Registrarse{
+    text-align: center;
+}
+
+.Cancelar{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Cancelar a{
+    position: relative;
+    right: 135px;
+    bottom: -17px;
+}
