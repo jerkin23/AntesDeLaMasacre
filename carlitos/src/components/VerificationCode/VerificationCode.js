@@ -31,12 +31,23 @@ const VerificationCode = () => {
   };
 
   return (
-    <div>
-      <h2>Recuperar Contraseña</h2>
+    <div className="VerificationCode" data-testid="VerificationCode">
+      <div className='Verification-Container'>
+
+        <div className='Verification-Header'>
+          <h1>Recuperar Contraseña</h1>
+        </div>
+        <div className='Verification-Text'>
       <p>Por favor introduce tu correo electrónico para recibir un código de verificación.</p>
+      </div>
+
       <form onSubmit={codeSent ? handleVerifyCode : handleSendCode}>
+        <div className='Email-label'>
         <label htmlFor="email">Correo Electrónico:</label>
+        </div>
         <br></br>
+
+        <div className='Email-verification'>
         <input
           type="email"
           id="email"
@@ -44,13 +55,17 @@ const VerificationCode = () => {
           onChange={handleEmailChange}
           required
         />
+        </div>
         <br></br>
+
+        <div className='Button-email'>
         <button type="submit" disabled={!emailEntered || codeSent}>Enviar Código</button>
+        </div>
         <br></br>
-        <label htmlFor="verificationCode">Código de Verificación (6 dígitos):</label>
-        <br></br>
+
+        <div className='Verification-code'>
         <input
-          type="number"
+        type="number"
           id="verificationCode"
           value={verificationCode}
           onChange={handleVerificationCodeChange}
@@ -59,11 +74,17 @@ const VerificationCode = () => {
           disabled={!codeSent}
         />
         <br></br>
+        </div>
+
+        <div className='Button-verification'>
         <button type="submit" disabled={!codeSent}>Verificar Código</button>
-        <div className='Sign-up'>
+        </div>
+        <div className='Sign-up-verification'>
           <a href='Login'>Cancelar</a>
         </div>
       </form>
+      
+    </div>
     </div>
   );
   };

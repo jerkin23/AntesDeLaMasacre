@@ -25,14 +25,14 @@ const Record = () => {
 
   return (
     <div className="Record" data-testid="Record">
-      <div className='Record-container'>
+      <div className='Record-Container'>
         <div className='HeaderRecord'>
           <h1>Registrarse</h1>
         </div>
         <div className='Record -form-container'>
           <form onSubmit={handleSubmit}>
+            
             <div className='EmailRecord'>
-            <frontZise></frontZise>
             <br></br>
               <input
                 type="email"
@@ -42,8 +42,8 @@ const Record = () => {
                 onChange={handleEmailChange}
               />
             </div>
+
             <div className='PasswordRecord'>
-            <frontZise></frontZise>
             <br></br>
               <input
               type="password"
@@ -53,8 +53,8 @@ const Record = () => {
               onChange={handlePasswordChange}
             />
           </div>
+
           <div className='Confirm-Password-Record'>
-          <frontZise></frontZise>
           <br></br>
             <input
               type="text"
@@ -72,6 +72,7 @@ const Record = () => {
               <a href='Login'>Cancelar</a>
             </div>
           </form>
+
         </div>
       </div>
     </div>

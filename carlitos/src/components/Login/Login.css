@@ -1,4 +1,7 @@
-.Login {}
+.Login {
+}
+
+
 .Header h1{
     font-family: sans-serif;
     font-size: 59px;
@@ -45,19 +48,19 @@
     text-align: center;
 }
 
-.Sign-up{
+.Sign-up-login{
     margin:0 auto;
     text-align: center;
 }
 
-.Sign-up a{
+.Sign-up-login a{
     position: relative;
     right: 135px;
     top: 35px;
 }
 
 
-.Sign-in button{
+.Sign-in-login button{
 
     text-decoration: none;
     text-align: center;
@@ -83,7 +86,7 @@
     
 }
 
-.Sign-in{
+.Sign-in-login{
     text-align: center;
 }
 /*Cambios*/

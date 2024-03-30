@@ -52,10 +52,10 @@ return (
           <div className='Forgot-password'>
             <a href='VerificationCode'>¿Olvidaste tu contraseña?</a>
           </div>
-          <div className='Sign-up'>
+          <div className='Sign-up-login'>
             <a href='Record'>Registrarse</a>
           </div>
-          <div className='Sign-in'>
+          <div className='Sign-in-login'>
             <button type="submit">Iniciar sesión</button>
           </div>
         </form>
