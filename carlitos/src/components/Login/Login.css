@@ -28,7 +28,7 @@
     outline: none;
     height: 36px;
     width: 348px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .Password{
@@ -45,7 +45,8 @@
 
 .Forgot-password a{
     position: relative;
-    text-align: center;
+    right: 93px;
+    top: -17px;
 }
 
 .Sign-up-login{
@@ -55,8 +56,8 @@
 
 .Sign-up-login a{
     position: relative;
-    right: 135px;
-    top: 35px;
+    right: -135px;
+    top: 65px;
 }
 
 
@@ -76,13 +77,12 @@
     background-color: #005DA6;
     background-position: color(#FFFFFF);
     height: 40px;
-    width: 184px;
+    width: 300px;
     padding: 4px 12px 4px 12px;
 
-    position: absolute;
-    top: 100;
+    
 
-    margin-top: 5px;
+    margin-top: -35px;
     
 }
 
@@ -93,7 +93,7 @@
 
 
 .Login-container{
-    height: 350px;
+    height: 400px;
     width: 400px;
     position: absolute;
     top: 50%;
