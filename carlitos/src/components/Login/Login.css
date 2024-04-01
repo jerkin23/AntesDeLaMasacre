@@ -90,3 +90,15 @@
     text-align: center;
 }
 /*Cambios*/
+
+
+.Login-container{
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #333;
+    border-radius: 5px;
+}
