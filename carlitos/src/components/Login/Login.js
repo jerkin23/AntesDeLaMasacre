@@ -29,7 +29,6 @@ return (
         <form onSubmit={handleSubmit}>
 
           <div className='Email'>
-          <frontZise></frontZise>
             <br></br>
             <input
               type="email"
@@ -41,7 +40,6 @@ return (
           </div>
 
           <div className='Password'>
-          <frontZise></frontZise>
             <br></br>
             <input
               type="password"
