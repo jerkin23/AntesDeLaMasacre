@@ -27,6 +27,7 @@ return (
       </div>
       <div className='Login-form-container'>
         <form onSubmit={handleSubmit}>
+
           <div className='Email'>
           <frontZise></frontZise>
             <br></br>
@@ -38,6 +39,7 @@ return (
               onChange={handleEmailChange}
             />
           </div>
+
           <div className='Password'>
           <frontZise></frontZise>
             <br></br>

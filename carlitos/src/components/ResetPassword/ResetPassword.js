@@ -28,6 +28,10 @@ const ResetPassword = () => {
     <div className="ResetPassword" data-testid="ResetPassword">
     <div className='ResetPassword-container'>
 
+<div className='Title-reset'>
+<h1>Cambiar contraseña</h1>
+</div>
+
       <form onSubmit={handleSubmit}>
       <div className='New-pasword-reset'>
         <input
@@ -51,6 +55,12 @@ const ResetPassword = () => {
           value={ConfirmPassword}
           onChange={hadleConfirmPasswordChange}
         />
+        </div>
+        <div className='Button-cancel-reset'>
+        <button type="submit">Cancelar</button>
+        </div>
+        <div className='Button-accept-reset'>
+        <button type="submit">Aceptar</button>
         </div>
 
       </form>
