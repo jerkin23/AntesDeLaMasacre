@@ -13,6 +13,11 @@
     text-align: center;
 }
 
+.Verification-Text{
+    position: relative;
+    align-items: center;
+}
+
 .Email-label label{
     font-family: sans-serif;
     font-size: 20px;
@@ -98,7 +103,7 @@
 
 .Verification-Container{
     height: 500px;
-    width: 470px;
+    width: 490px;
     position: absolute;
     top: 50%;
     left: 50%;
