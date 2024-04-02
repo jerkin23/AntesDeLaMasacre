@@ -90,3 +90,23 @@
     border: 1px solid #333;
     border-radius: 5px;
 }
+
+.Button-verification button{
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-spacing: 0px;
+    border-radius: 5px;
+    text-emphasis-color: white;
+    background-color: black;
+    color: white;
+
+
+    background-color: #005DA6;
+    background-position: color(#FFFFFF);
+    height: 40px;
+    width: 300px;
+    padding: 4px 12px 4px 12px;
+    margin-top: 5px;
+}

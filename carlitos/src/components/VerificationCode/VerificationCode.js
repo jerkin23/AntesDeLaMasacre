@@ -62,7 +62,9 @@ const VerificationCode = () => {
         <button type="submit" disabled={!emailEntered || codeSent}>Enviar Código</button>
         </div>
         <br></br>
-
+        <div className='Code-text'>
+        <label>Código de verificación</label>
+        </div>
         <div className='Verification-code'>
         <input
         type="number"
@@ -75,7 +77,6 @@ const VerificationCode = () => {
         />
         <br></br>
         </div>
-
         <div className='Button-verification'>
         <button type="submit" disabled={!codeSent}>Verificar Código</button>
         </div>
