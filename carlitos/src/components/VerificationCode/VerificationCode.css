@@ -10,10 +10,11 @@
 .Verification-Text p{
     font-family: sans-serif;
     font-size: 18px;
-    text-align: center;
+    text-align: left;
     position: relative;
     margin: 30px;
     margin-top: 30px;
+    right: -40px;
 }
 
 .Verification-Text{
@@ -107,7 +108,7 @@
 
 .Verification-Container{
     height: 500px;
-    width: 520px;
+    width: 580px;
     position: absolute;
     top: 50%;
     left: 50%;
