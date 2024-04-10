@@ -1,0 +1,58 @@
+
+body {
+    background-color: #20212c;
+  }
+  .Contenedor {
+    
+    margin-top: 2rem;
+   
+  }
+  .Calendar {
+    width: 95vw;
+    height: 80vh;
+    margin-left: 3rem;
+  }
+  @media (max-width: 768px) {
+    .Calendar {
+      width: 95vw !important;
+      height: 85vh !important;
+      margin-left: 0rem;
+    }
+  }
+  
+  
+  .rbc-time-view {
+    background-color: aliceblue;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .Contenedor {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+    .Calendar {
+      width: 100vw;
+      height: 70vh;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      
+      font-size: 1rem;
+      flex-direction: row;
+    }
+    .links a {
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: 0.3s;
+    }
+    .icono {
+      font-size: 1.5rem;
+    }
+  }
+  

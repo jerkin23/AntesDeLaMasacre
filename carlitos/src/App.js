@@ -6,6 +6,7 @@ import Record from './components/Record/Record';
 import RegisterForm from './components/RegisterForm/RegisterForm';
 import VerificationCode from './components/VerificationCode/VerificationCode';
 import ResetPassword from './components/ResetPassword/ResetPassword';
+import Principal from './components/Principal/Principal';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/RegisterForm" element={<RegisterForm />} />
         <Route path="/" element={<InitialRedirect />} />
+        <Route path="/Principal" element={<Principal />} />
+
         </Routes>
       </Router>
     </div>
