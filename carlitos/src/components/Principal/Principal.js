@@ -1,12 +1,12 @@
-import "./App.css";
+import "./Principal.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Calendar, dayjsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import dayjs from "dayjs";
-import NavBar from "./components/NavBar/NavBar";
-import CalendarModal from "./components/CalendarModel/CalendarModal";
-import FLoatButton from "./components/FloatinButton/FloatingButton.jsx";
+import NavBar from "../NavBar/NavBar.js";
+import CalendarModal from "../CalendarModel/CalendarModal.js";
+import FLoatButton from "../FloatinButton/FloatingButton.js";
 import { mockData } from "../../Mock/Mock.js";
 
 function App() {
@@ -102,7 +102,7 @@ function App() {
     //Actualizamos el estado Event con los nuevos datos adquiridos de la busqueda
     setEvents([...filteredEvents]);
 
-  }, [personId]);20
+  }, [personId]);
 
 
   //Settea las fechas limites del calendario para pasarlas como prop (calendarLimit.(lo que queramos obtener))

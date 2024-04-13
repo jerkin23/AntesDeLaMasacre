@@ -9,7 +9,7 @@ import { BsCalendar2X } from "react-icons/bs";
 import { useState } from 'react';
 import { FaEllipsisH } from "react-icons/fa";
 import CalendarModal from '../CalendarModel/CalendarModal';
-import ModalEdit from '../ModalEdit/ModalEdit';
+import ModalEdit from '../EditModal/EditModal.js';
 
 
 export default function FloatingActionButtons() {

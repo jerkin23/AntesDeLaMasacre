@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import './Login.css';
+import axios from 'axios';
+import { login } from '../../Mock/Mock.js';
 
 
 const Login = () => {
@@ -16,8 +18,44 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
-  };
+    e.preventDefault();
+
+
+      // Usa la función login para validar las credenciales
+      const usuario = login(email, password);
+
+      if (usuario) {
+          // Si el inicio de sesión es exitoso, redirige al usuario a la página principal
+          window.location.href = '/principal';
+      } else {
+          // Maneja el error de inicio de sesión aquí
+          console.error('Error de inicio de sesión');
+      }
+    
+
+
+
+    // Enviar email y password al backend
+    axios.post('https://tu-backend.com/api/login', {
+        email,
+        password
+    })
+    .then(response => {
+        // Si el inicio de sesión es exitoso, redirige al usuario a la página principal
+        if (response.data.success) {
+            window.location.href = '/principal';
+        } else {
+            // Maneja el error de inicio de sesión aquí
+            console.error('Error de inicio de sesión');
+        }
+    })
+    .catch(error => {
+        // Maneja cualquier error de red aquí
+        console.error(error);
+    });
+};
+
+
 
 return (
   <div className="Login" data-testid="Login">

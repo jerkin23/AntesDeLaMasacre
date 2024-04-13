@@ -45,7 +45,7 @@ export const mockData = [
       lugar: 'Lugar 1',
     },
     {
-      personId: 2,
+      personId: 1,
       title: 'Evento 2',
       start: '11:00',
       end: '14:00',
@@ -62,3 +62,24 @@ export const mockData = [
     },
     // Agrega más eventos según sea necesario
   ];
+  export const usuarios = [
+    {
+        id: 1,
+        email: 'usuario1@example.com',
+        password: 'password123' // En una aplicación real, nunca almacenes contraseñas en texto plano
+    },
+    {
+        id: 2,
+        email: 'usuario2@example.com',
+        password: 'password456'
+    },
+    {
+        id: 3,
+        email: 'usuario3@example.com',
+        password: 'password789'
+    },
+    // Agrega más usuarios según sea necesario
+];
+export function login(email, password) {
+  return usuarios.find(usuario => usuario.email === email && usuario.password === password);
+}

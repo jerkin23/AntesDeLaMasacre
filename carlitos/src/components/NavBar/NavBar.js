@@ -1,5 +1,5 @@
 import React, { useState, useEffecT } from 'react';
-import { mockData } from '../../../../Mock/Mock';
+import { mockData } from '../../Mock/Mock.js';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

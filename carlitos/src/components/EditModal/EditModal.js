@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { useState, } from 'react';
 import Modal from 'react-modal';
-import '../ModalEdit/CalendarEdit.css';
+import '../EditModal/EditModal.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';

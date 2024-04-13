@@ -1,6 +1,10 @@
 import React, { useState} from 'react';
 import PropTypes from 'prop-types';
 import './Record.css';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css'
+
 
 const Record = () => {
   const [email, setEmail] = useState('');
@@ -20,8 +24,36 @@ const Record = () => {
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
-  };
+    e.preventDefault();
+
+    // Validación del formulario
+    if (password !== confirmPassword) {
+        Swal.fire('Error', 'Las contraseñas no coinciden', 'error');
+        return;
+    }
+
+    // Enviar los datos del usuario al backend
+    axios.post('https://tu-backend.com/api/register', {
+        email,
+        password
+    })
+        
+    .then(response => {
+        // Si el registro es exitoso, redirige al usuario a la página de inicio de sesión
+        if (response.data.success) {
+            window.location.href = '/login';
+        } else {
+            // Maneja el error de registro aquí
+            console.error('Error de registro: ' + response.data.message);
+        }
+    })
+    .catch(error => {
+        // Maneja cualquier error de red aquí
+        console.error('Error de red: ' + error.message);
+    });
+};
+    
+
 
   return (
     <div className="Record" data-testid="Record">
@@ -57,7 +89,7 @@ const Record = () => {
           <div className='Confirm-Password-Record'>
           <br></br>
             <input
-              type="text"
+              type="password"
               name="confirmPassword"
               placeholder="Confirmar Contraseña"
               value={confirmPassword}
