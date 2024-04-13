@@ -10,12 +10,15 @@ import { useState } from 'react';
 import { FaEllipsisH } from "react-icons/fa";
 import CalendarModal from '../CalendarModel/CalendarModal';
 import ModalEdit from '../EditModal/EditModal.js';
+import CancelModal from '../CancelModal/CancelModal.js';
 
 
 export default function FloatingActionButtons() {
   const [anchorEl, setAnchorEl] = useState(null);
   
   const [modalOpen, setModalOpen] = useState(false);
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [cancelModalOpen, setCancelModalOpen] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -24,6 +27,21 @@ export default function FloatingActionButtons() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const openCancelModal = () => {
+    setCancelModalOpen(true);
+  }
+
+  const closeCancelModal = () => {  
+    setCancelModalOpen(false);
+  }
+
+  const openEditModal = () => {
+    setEditModalOpen(true);
+  }
+  const closeEditModal = () => {
+    setEditModalOpen(false);
+  }
 
   const openModal = () => {
     setModalOpen(true);
@@ -61,10 +79,10 @@ export default function FloatingActionButtons() {
             horizontal: 'center',
           }}
         >
-          <Fab onClick={closeModal} color="secondary" aria-label="edit" >
+          <Fab onClick={openEditModal} color="secondary" aria-label="edit" >
             <EditIcon />
           </Fab>
-          <Fab onClick={closeModal} color="secondary" aria-label="Cancel" >
+          <Fab onClick={openCancelModal} color="secondary" aria-label="Cancel" >
             <BsCalendar2X/>
           </Fab>
           <Fab onClick={openModal} color="secondary" aria-label="edit">
@@ -73,6 +91,8 @@ export default function FloatingActionButtons() {
         </Popover>
       )}
 
+      <CancelModal open={cancelModalOpen} handleOpen={openCancelModal} handleClose={closeCancelModal} />
+      <ModalEdit open={editModalOpen} handleOpen={openEditModal} handleClose={closeEditModal} />
       <CalendarModal open={modalOpen} handleOpen={openModal} handleClose={closeModal} />
       
     </Box>

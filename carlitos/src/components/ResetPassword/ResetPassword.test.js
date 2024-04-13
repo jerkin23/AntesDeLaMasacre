@@ -1,14 +1,18 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import ResetPassword from './ResetPassword';
 
-describe('<ResetPassword />', () => {
-  test('it should mount', () => {
-    render(<ResetPassword />);
-    
-    const resetPassword = screen.getByTestId('ResetPassword');
+jest.mock('axios');
+const axios = require('axios');
 
-    expect(resetPassword).toBeInTheDocument();
+describe('ResetPassword', () => {
+  it('muestra un mensaje de éxito cuando la contraseña se cambia correctamente', async () => {
+    axios.post.mockResolvedValue({ data: {} });
+
+    const { getByPlaceholderText, getByText } = render(<ResetPassword />);
+
+    fireEvent.change(getByPlaceholderText('Nueva contraseña'), { target: { value: 'nuevacontraseña' } });
+    fireEvent.submit(getByText('Cambiar contraseña'));
+
+    await waitFor(() => expect(axios.post).toHaveBeenCalledWith('https://tu-api.com/cambiar-contrasena', { password: 'nuevacontraseña' }));
   });
 });
