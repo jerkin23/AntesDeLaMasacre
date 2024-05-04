@@ -1,12 +1,12 @@
 import { useState, } from 'react';
 import Modal from 'react-modal';
 import './CalendarModal.css';
-import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
+import { parse, isAfter } from 'date-fns';
 import { differenceInMinutes } from 'date-fns';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css'
-import "react-datepicker/dist/react-datepicker.css";
+
 
 
 
@@ -53,18 +53,12 @@ const customStyles = {
             event.preventDefault();
             const { title, lugar, dayOfWeek, start, end } = formValues;
         
-            const startDate = new Date(`1970-01-01T${start}:00`);
-            const endDate = new Date(`1970-01-01T${end}:00`);
-        
-            // Calculate the difference in minutes
-            const difference = differenceInMinutes(endDate, startDate);
-        
-          
-           
+            const startDate = parse(start, 'HH:mm', new Date());
+            const endDate = parse(end, 'HH:mm', new Date());
 
-            if( isNaN(difference) || difference <= 0){
-                Swal.fire('Error', 'La fecha de final debe ser menor a la inicial', 'error');
-                
+            // Check if the end time is after the start time
+            if (!isAfter(endDate, startDate)) {
+                Swal.fire('Error', 'La hora de final debe ser mayor a la inicial', 'error');
                 return;
             }
             if ( formValues.title.length <= 0){
