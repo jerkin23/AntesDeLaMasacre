@@ -1,4 +1,9 @@
 /* Modal */
+hr {
+    border: 1px solid #6462A7;
+    width: 100%;
+    margin: 1rem 0rem;
+}
 .ReactModalPortal > div{
     opacity: 0;
 }
@@ -7,6 +12,7 @@
     
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: opacity .2s ease-in-out;
     z-index: 999;
 }
@@ -73,9 +79,57 @@
     display: flex;
     flex-direction: row;
     width: 70%;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    font-size: 0.9rem; 
+    color: #6462A7;
 }
 .label{
     font-size: 1.5rem;
     font-weight: 500;
     margin-right: 1rem;
+}
+.select {
+    width: 75%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    color: #6462A7;
+    font-size: .9rem;
+    margin: 0.7rem;
+}
+.select-time{
+    width: 43%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    color: #6462A7;
+    font-size: .9rem;
+
+    margin: 0rem 4.5rem 1rem 3rem;
+}
+.group-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.time{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0rem 1rem 0rem;
+}
+.time input {
+    width: 23%;
+    padding: 0rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    color: #6462A7;
+    font-size: 0.9rem;
+    margin-left: 6rem;
 }
