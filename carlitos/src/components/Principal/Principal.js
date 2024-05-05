@@ -8,6 +8,7 @@ import NavBar from "../NavBar/NavBar.js";
 import CalendarModal from "../CalendarModel/CalendarModal.js";
 import FLoatButton from "../FloatinButton/FloatingButton.js";
 import { mockData } from "../../Mock/Mock.js";
+import EditModal from "../EditModal/EditModal.js";
 
 function App() {
   const localizer = dayjsLocalizer(dayjs);
@@ -15,6 +16,7 @@ function App() {
 
   const [events, setEvents] = useState([]);
   const [personId, setPersonId] = useState("");
+  const [openEditModal, setOpenEditModal] = useState(false);
 
 
   useEffect(() => {
@@ -66,6 +68,15 @@ function App() {
     </div>
   );
 
+  const handleSelectEvent = (event) => {
+    setOpenEditModal(true);
+    console.log("Evento seleccionado:", event);
+  }
+
+  const handleClose = () => {
+    setOpenEditModal(false);
+  }
+
   return (
     <div className="general__container">
 
@@ -80,6 +91,7 @@ function App() {
           defaultView="week"
           toolbar={false}
           events={events}
+          onSelectEvent={handleSelectEvent}
           drilldownView={false}
           onNavigate={() => null}
           min={dayjs("2022-02-07T06:00:00").toDate()}
@@ -97,6 +109,8 @@ function App() {
       <FLoatButton />
 
       <CalendarModal />
+
+      <EditModal open={openEditModal} handleClose={handleClose} />
     </div>
   );
 }
